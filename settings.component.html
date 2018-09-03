@@ -1,0 +1,8 @@
+<app-custom-img [target]= "target" (colorChange)= "getColor($event)"></app-custom-img>
+
+
+<div *ngFor="let item of colorItems" (click)="onClick($event)">
+  <div id="{{item}}">
+    {{item}} ---  <p [ngStyle] ="{'color' : data[item]}">This is selected color of {{item}}</p>
+  </div>
+</div>
